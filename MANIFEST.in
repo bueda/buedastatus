@@ -1,0 +1,3 @@
+include buedastatus/config/deployment.ini_tmpl
+recursive-include buedastatus/public *
+recursive-include buedastatus/templates *
