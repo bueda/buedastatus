@@ -2,6 +2,7 @@ import logging
 
 from pylons import request, response, session, tmpl_context as c
 from pylons.controllers.util import abort, redirect_to
+from sqlalchemy import desc
 
 from buedastatus.lib.base import BaseController, render
 from buedastatus.lib.check import is_bueda_up
@@ -14,7 +15,7 @@ class StatusController(BaseController):
 
     def index(self):
         # Return a rendered template
-        c.statuses = Session.query(Status).order_by('time').limit(25)
+        c.statuses = Session.query(Status).order_by(desc(Status.time)).limit(25)
         return render('/status.mako')
 
     def check(self):
