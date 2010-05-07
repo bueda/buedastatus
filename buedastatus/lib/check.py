@@ -1,4 +1,5 @@
 import bueda
+bueda.init('IxJLXW5wdoy4l8vUJCaoljkxHbFzaNmldk6Fzw')
 
 def is_bueda_up():
     '''
