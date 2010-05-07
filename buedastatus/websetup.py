@@ -3,6 +3,7 @@ import logging
 
 from buedastatus.config.environment import load_environment
 from buedastatus.model import meta
+from buedastatus.model import model
 
 log = logging.getLogger(__name__)
 
@@ -12,3 +13,4 @@ def setup_app(command, conf, vars):
 
     # Create the tables if they don't already exist
     meta.metadata.create_all(bind=meta.engine)
+
