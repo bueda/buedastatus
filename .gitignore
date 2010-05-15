@@ -1,5 +1,6 @@
 *.pyc
 data/
+build/
 buedastatus.egg-info/
 development.db
 
